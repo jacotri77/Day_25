@@ -6,6 +6,7 @@
     "axios": "^0.16.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-router-dom": "next",
     "redux": "^3.6.0"
   },
   "devDependencies": {
@@ -24,6 +25,8 @@
     "version": "0.1.0"
   },
   "description": "",
-  "author": "",
-  "license": "ISC"
+  "author": "Erik Jacobsen <slowerthanyou@gmail.com>",
+  "license": "ISC",
+  "main": "index.js",
+  "repository": "git@github.com:jacotri77/Day_25.git"
 }
