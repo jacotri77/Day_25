@@ -1,14 +1,18 @@
 import React from 'react'
-import {BrowerRouter as Router, Link, Route} from 'react-router-dom'
+// import {BrowerRouter as Router} from 'react-router-dom'
 import Header from './header'
+import Repo from './repo'
+import Main from './main'
 
 export default React.createClass({
   render() {
     return (
-    	<Router>
-      <h1>Hello world</h1>
-      <Header />
-      </Router>
+    <div>
+     <Header />
+     <Main />
+     <Repo />
+     </div>
+      
     )
   }
 })

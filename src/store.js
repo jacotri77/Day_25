@@ -3,7 +3,7 @@ import gitHubReducer from './reducers/gitHubReducer'
 
 
 const rootReducer = combineReducers({
-  gitHubReducer,
+  gitHubReducer
 })
 
 const store = createStore(rootReducer)
