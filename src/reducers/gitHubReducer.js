@@ -1,6 +1,6 @@
 const initialState = {
 	user:{},
-	repo:{}
+	repo:[]
 }
 
 export default function(state=initialState, action) {

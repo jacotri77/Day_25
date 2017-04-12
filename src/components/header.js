@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import store from '../store'
+import {getGitHubData} from '../api/gitHubAPI'
 
 const styles ={
   headBlock:{
@@ -20,18 +22,32 @@ const styles ={
 }
 
 class Header extends Component{
-
-	
-
-
+  constructor(props){
+  super(props)
+  this.state = {user: {}}
+}
+componentWillMount() {
+      this.unsubscribe = store.subscribe(()=>{
+          const appState = store.getState()
+      this.setState({
+            user: appState.gitHubReducer.user
+          })
+      })
+      getGitHubData()
+    }
+    componentWillUnmount() {
+      this.unsubscribe()
+    }
 	render() {
     return (
       <div style={styles.headBlock}>
-          <img src={require('../images/GitHubSmall.png')} alt="GitHub Logo" />
+          <img src={require('../images/GitHubSmall.png')} alt="GitHub Logo" id="gitHeadLogo"/>
           <input type="text" placeholder="Search GitHub" style={styles.headInput}/>
           <span className="headerSpan">Pull requests</span>
           <span className="headerSpan">Issues</span>
           <span className="headerSpan">Gist</span>
+          <span className="rightHeaderSpan">+</span>
+          <span className="rightHeaderSpan"><img src={this.state.user.avatar_url} id="smallAvatarDiv" alt="Erik Jacobsen"/></span>
       </div>
 
     	)

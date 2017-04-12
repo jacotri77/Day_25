@@ -6,7 +6,20 @@ const styles ={
   profilePic:{
     height: 250,
     width: 250,
- 
+    marginTop:20
+  },
+  userNameLi:{
+    fontSize:30,
+    fontWeight:'bold'
+  },
+  userLoginLi:{
+    fontSize:24,
+    color:'#666',
+    marginBottom:10
+  },
+  userBioLi:{
+    fontSize:20,
+    color:'#666'
   }
 }
 class Main extends Component{
@@ -19,7 +32,6 @@ componentWillMount() {
           const appState = store.getState()
       this.setState({
             user: appState.gitHubReducer.user
-         
           })
       })
       getGitHubData()
@@ -30,29 +42,16 @@ componentWillMount() {
 
 	render() {
     return (
-      <div>
+      <div id="mainDiv">
           <img src={this.state.user.avatar_url} alt="Erik Jacobsen" style={styles.profilePic} />
-          <h1>{this.state.user.name}</h1>
-          <span>{this.state.user.login}</span>
-        <footer id="mainFoot"> 
-          <span>&copy; GitHub, inc.</span>
           <ul>
-            <li href="#">Terms</li>
-            <li href="#">Privacy</li>
-            <li href="#">Security</li>
-            <li href="#">Status</li>
-            <li href="#">Help</li>
+            <li style={styles.userNameLi}>{this.state.user.name}</li>
+            <li style={styles.userLoginLi}>{this.state.user.login}</li>
+            <li style={styles.userBioLi}>{this.state.user.bio}</li>
+            <li>{this.state.user.location}</li>
+            <li>{this.state.user.email}</li>
+            <li>{this.state.user.blog}</li>
           </ul>
-          <img src={require('../images/GitHub-Mark-32px.png')} alt="GitHub Logo" id="mainGitLogo"/>
-          <ul>
-            <li>Contact GitHub</li>
-            <li>API</li>
-            <li>Training</li>
-            <li>Shop</li>
-            <li>Blog</li>
-            <li>About</li>
-          </ul>
-        </footer>
       </div>
     	)
     }

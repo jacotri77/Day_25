@@ -3,6 +3,7 @@ import React from 'react'
 import Header from './header'
 import Repo from './repo'
 import Main from './main'
+import Footer from './footer'
 
 export default React.createClass({
   render() {
@@ -11,6 +12,7 @@ export default React.createClass({
      <Header />
      <Main />
      <Repo />
+     <Footer />
      </div>
       
     )
