@@ -63,8 +63,21 @@ componentWillMount() {
           </div>
           <div>
             <input type="text" placeholder="Seach repositories..." style={styles.repoInput} />
-            <select>Type</select>
-            <select>language</select>
+            <select>Type
+              <option value="all">All</option>
+              <option value="public">Public</option>
+              <option value="private">Private</option>
+              <option value="sources">Sources</option>
+              <option value="forks">Forks</option>
+              <option value="mirrors">Mirrors</option>
+            </select>
+
+            <select>language
+              <option value="all">All</option>
+              <option value="CSS">CSS</option>
+              <option value="html">HTML</option>
+              <option value="javaScript">JavaScript</option>
+            </select>
             <button style={styles.newButton}>New</button>
           </div>
         </main>
