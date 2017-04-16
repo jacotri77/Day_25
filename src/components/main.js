@@ -48,6 +48,7 @@ componentWillMount() {
             <li style={styles.userNameLi}>{this.state.user.name}</li>
             <li style={styles.userLoginLi}>{this.state.user.login}</li>
             <li style={styles.userBioLi}>{this.state.user.bio}</li>
+            <p></p>
             <li>{this.state.user.location}</li>
             <li><a href="mailto:slowerthanyou@gmail.com">{this.state.user.email}</a></li>
             <li><a href="http://www.jitterbastard.com">{this.state.user.blog} </a></li>

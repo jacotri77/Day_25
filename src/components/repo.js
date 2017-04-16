@@ -1,28 +1,13 @@
 import React, {Component} from 'react'
 import store from '../store'
 import {getGitHubRepo} from '../api/gitHubAPI'
+import SelectField from 'material-ui/SelectField'
+import MenuItem from 'material-ui/MenuItem'
 
 
-const styles ={
-  newButton:{
-    height: 35,
-    width: 80,
-    border:0,
-    outline:0,
-    background: 'rgb(41,169,69)',
-    color: 'white',
-    borderRadius:5,
-    fontSize:14
-  },
-  repoInput:{
-    height:35,
-    width:350,
-    outline:0,
-    border:'1px solid #666',
-    fontSize:14,
-    paddingLeft:10,
-    background: 'white'
-
+const styles = {
+  customWidth: {
+    width: 150,
   }
 }
 
@@ -31,15 +16,17 @@ class Repo extends Component{
 	super(props)
 	this.state = {
       repo: [],
-      user:{}}
+      user:{},
+      value:1,
+    }
 }
+ handleChange = (event, index, value) => this.setState({value})
 componentWillMount() {
       this.unsubscribe = store.subscribe(()=>{
           const appState = store.getState()
       this.setState({
             repo: appState.gitHubReducer.repo,
             user: appState.gitHubReducer.user
-         
           })
       })
       getGitHubRepo()
@@ -47,11 +34,12 @@ componentWillMount() {
     componentWillUnmount() {
       this.unsubscribe()
     }
+   
+   
 
 	render() {
     return (
       <div id="repoMainDiv">
-      <main>
           <div id="repoMenu">
             <ul>
               <li>Overview</li>
@@ -61,29 +49,24 @@ componentWillMount() {
               <li>Following {this.state.user.following}</li>
             </ul>
           </div>
-          <div>
-            <input type="text" placeholder="Seach repositories..." style={styles.repoInput} />
-            
-            <select name="type">
-              <option label for="type">Type: All</option>
-              <option value="all">All</option>
-              <option value="public">Public</option>
-              <option value="private">Private</option>
-              <option value="sources">Sources</option>
-              <option value="forks">Forks</option>
-              <option value="mirrors">Mirrors</option>
-             
-            </select>
-            <label for="language">Language:</label>
-            <select name="language">
-              <option value="all">All</option>
-              <option value="CSS">CSS</option>
-              <option value="html">HTML</option>
-              <option value="javaScript">JavaScript</option>
-            </select>
-            <button style={styles.newButton}>New</button>
-          </div>
-        </main>
+        <div id="inputContainer">
+          <input type="text" placeholder="Seach repositories..." id="repoInput" />
+          <SelectField floatingLabelText="Type:" value={this.state.value} onChange={this.handleChange} style={styles.customWidth} id="selects">
+            <MenuItem value={1} primaryText="All" />
+            <MenuItem value={2} primaryText="Public" />
+            <MenuItem value={3} primaryText="Private" />
+            <MenuItem value={4} primaryText="Sources" />
+            <MenuItem value={5} primaryText="Forks" />
+            <MenuItem value={5} primaryText="Mirrors" />
+          </SelectField>
+          <SelectField floatingLabelText="Language:" value={this.state.value} onChange={this.handleChange} style={styles.customWidth} id="selectsLang">
+            <MenuItem value={1} primaryText="All" />
+            <MenuItem value={2} primaryText="CSS" />
+            <MenuItem value={3} primaryText="HTML" />
+            <MenuItem value={4} primaryText="JavaScript" />
+          </SelectField>
+        <button id="newButton">New</button>
+        </div>
           {this.state.repo.slice(0,20).map(info=>{  
             return (
             <div key={info.id} id="repoContainer">

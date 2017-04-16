@@ -27,13 +27,15 @@ html {
 	align-items: flex-end;
 	height:100px;
 	width:100%;
-	border-top:1px solid #666;
+	border-top:1px solid rgb(209, 213, 218);
 	
 }
 
 #mainFoot li{
 	display: inline-block;
 	list-style: none;
+	color:rgb(209, 213, 218);
+	margin:0px 10px;
 }
 
 #mainGitLogo{
@@ -44,7 +46,7 @@ html {
 #mainDiv{
 	float: left;
 	height: 2600px;
-	width:28%;
+	width:25%;
 
 }
 
@@ -56,18 +58,22 @@ html {
 #mainDiv ul{
 	padding-left: 0;
 
+}  
+#mainDiv p{
+	border-bottom: 1px solid rgb(88,96,105);
 }
 
 #smallAvatarDiv{
 	height:20px;
 	width: 20px;
+	color: rgb(88,96,105);
 
 }
 
 #repoMainDiv{
 	float:right;
 	height:2600px;
-	width:70%;
+	width:60%;
 }
 
 #repoMenu{
@@ -83,7 +89,45 @@ html {
 #repoContainer{
 	height: 100px;
 	width:100%;
-	border-bottom: 1px solid #666;
+	border-bottom:1px solid rgb(209, 213, 218)
+}
+#repoContainer h2, #repoContainer p{
+	color:rgb(88,96,105);
+}
+#selects, #selectsLang{
+	display: inline-block;
+	width: 135px;
+	height: 35px;
+	margin:0px 10px;
+}
+#newButton{
+	display: inline-block;
+    height: 35px;
+    width: 80px;
+    border:0;
+    outline:0;
+    background: rgb(41,169,69);
+    color: white;
+    border-radius:5px;
+    font-size:14px;
+    margin:0px 10px;
+}
+#repoInput{
+	display: inline-block; 
+    height:35px;
+    width:350px;
+    outline:0;
+    border:1px solid rgb(209, 213, 218);
+    font-size:14px;
+    padding-left:10px;
+    background: white;
+    margin:0px 10px;
+}
+
+#inputContainer{
+	height: 100px;
+	width: 100%;
+	border-bottom: rgb(209, 213, 218);
 }
 
 a:link, a:visited, a:hover, a:active{
