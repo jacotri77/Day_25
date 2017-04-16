@@ -49,8 +49,10 @@ componentWillMount() {
           <span className="headerSpan">Pull requests</span>
           <span className="headerSpan">Issues</span>
           <span className="headerSpan">Gist</span>
-          <span className="rightHeaderSpan">+</span>
-          <span className="rightHeaderSpan"><img src={this.state.user.avatar_url} id="smallAvatarDiv" alt="Erik Jacobsen"/></span>
+          <div id="rightHeaderSpan">
+          <span>+</span>
+          <img src={this.state.user.avatar_url} id="smallAvatarDiv" alt="Erik Jacobsen"/>
+          </div>
       </div>
 
     	)

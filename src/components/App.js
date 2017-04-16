@@ -13,7 +13,7 @@ export default React.createClass({
     injectTapEventPlugin()
     return (
     <MuiThemeProvider>
-    <div>
+    <div id="container">
      <Header />
      <Main />
      <Repo />

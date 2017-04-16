@@ -6,6 +6,10 @@ html {
 	box-sizing: inherit;
 }
 
+#container{
+	width:100%;
+	margin:auto;
+}
 .rightHeaderSpan{
 	float: right;
 	line-height: 50px;
@@ -17,7 +21,7 @@ html {
 	margin-left:30px;
 }
 #gitHeadLogo{
-	line-height: 40px;
+	vertical-align: middle;
 	margin:0px 0px 0px 20px;
 }
 
@@ -28,13 +32,12 @@ html {
 	height:100px;
 	width:100%;
 	border-top:1px solid rgb(209, 213, 218);
-	
 }
 
 #mainFoot li{
 	display: inline-block;
 	list-style: none;
-	color:rgb(209, 213, 218);
+	color:rgb(88,96,105);
 	margin:0px 10px;
 }
 
@@ -42,12 +45,12 @@ html {
 	height: 40px;
 	width: 40px;
 	line-height: 100px;
+	color:rgb(209, 213, 218);
 }
 #mainDiv{
 	float: left;
 	height: 2600px;
 	width:25%;
-
 }
 
 #mainDiv li{
@@ -66,8 +69,15 @@ html {
 #smallAvatarDiv{
 	height:20px;
 	width: 20px;
+	margin-left:10px;
 	color: rgb(88,96,105);
-
+}
+#rightHeaderSpan{
+	float: right;
+	width:60px;
+	height:50px;
+	line-height: 50px;
+	margin:auto;
 }
 
 #repoMainDiv{
@@ -95,13 +105,13 @@ html {
 	color:rgb(88,96,105);
 }
 #selects, #selectsLang{
-	display: inline-block;
 	width: 135px;
 	height: 35px;
 	margin:0px 10px;
 }
 #newButton{
-	display: inline-block;
+	text-align: center;
+	align-items: center;
     height: 35px;
     width: 80px;
     border:0;
@@ -113,7 +123,6 @@ html {
     margin:0px 10px;
 }
 #repoInput{
-	display: inline-block; 
     height:35px;
     width:350px;
     outline:0;
@@ -125,9 +134,13 @@ html {
 }
 
 #inputContainer{
-	height: 100px;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-between;
+	height: 70px;
 	width: 100%;
-	border-bottom: rgb(209, 213, 218);
+	border-bottom:1px solid rgb(209, 213, 218);
 }
 
 a:link, a:visited, a:hover, a:active{
