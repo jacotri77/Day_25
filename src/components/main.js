@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import store from '../store'
 import {getGitHubData} from '../api/gitHubAPI'
+import '../../node_modules/font-awesome/css/font-awesome.css'
 
 const styles ={
   profilePic:{
@@ -49,9 +50,9 @@ componentWillMount() {
             <li style={styles.userLoginLi}>{this.state.user.login}</li>
             <li style={styles.userBioLi}>{this.state.user.bio}</li>
             <p></p>
-            <li>{this.state.user.location}</li>
-            <li><a href="mailto:slowerthanyou@gmail.com">{this.state.user.email}</a></li>
-            <li><a href="http://www.jitterbastard.com">{this.state.user.blog} </a></li>
+            <li><i className="fa fa-map-marker" aria-hidden="true"><a href="#" id="moveThis">{this.state.user.location}</a></i></li>
+            <li><i className="fa fa-envelope" aria-hidden="true"><a href="mailto:slowerthanyou@gmail.com">{this.state.user.email}</a></i></li>
+            <li><i className="fa fa-link" aria-hidden="true"><a href="http://www.jitterbastard.com">{this.state.user.blog}</a></i></li>
           </ul>
       </div>
     	)

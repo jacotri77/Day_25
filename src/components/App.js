@@ -13,12 +13,12 @@ export default React.createClass({
     injectTapEventPlugin()
     return (
     <MuiThemeProvider>
-    <div id="container">
-     <Header />
-     <Main />
-     <Repo />
-     <Footer />
-     </div>
+      <div id="container">
+         <Header />
+         <Main />
+         <Repo />
+         <Footer />
+       </div>
      </MuiThemeProvider>
       
     )

@@ -24,6 +24,10 @@ html {
 	vertical-align: middle;
 	margin:0px 0px 0px 20px;
 }
+#moveThis{
+	padding-left: 10px;
+	color:rgb(102,102,102);
+}
 
 #mainFoot{
 	display: flex;
@@ -56,6 +60,12 @@ html {
 #mainDiv li{
 	list-style: none;
 	text-align: left;
+}
+#mainDiv a{
+	margin-left:10px;
+}
+.fa {
+	padding-right: 10px;
 }
 
 #mainDiv ul{
