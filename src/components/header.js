@@ -7,16 +7,19 @@ const styles ={
     height: 50,
     width: '100%',
     background: 'rgb(36,41,46)',
-    color: 'rgb(200,201,203)'
+    color: 'rgb(200,201,203)',
+    
+
   },
   headInput:{
-    height:40,
+    height:35,
     width:300,
     outline:0,
     border:0,
     fontSize:14,
     paddingLeft:10,
-    background: 'rgb(63,67,71)'
+    background: 'rgb(63,67,71)',
+    marginLeft: 30
 
   }
 }
@@ -54,3 +57,4 @@ componentWillMount() {
     }
 }
 export default Header
+

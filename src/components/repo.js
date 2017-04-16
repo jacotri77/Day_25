@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import store from '../store'
 import {getGitHubRepo} from '../api/gitHubAPI'
-import {getGitHubData} from '../api/gitHubAPI'
+
 
 const styles ={
   newButton:{
@@ -63,16 +63,19 @@ componentWillMount() {
           </div>
           <div>
             <input type="text" placeholder="Seach repositories..." style={styles.repoInput} />
-            <select>Type
+            
+            <select name="type">
+              <option label for="type">Type: All</option>
               <option value="all">All</option>
               <option value="public">Public</option>
               <option value="private">Private</option>
               <option value="sources">Sources</option>
               <option value="forks">Forks</option>
               <option value="mirrors">Mirrors</option>
+             
             </select>
-
-            <select>language
+            <label for="language">Language:</label>
+            <select name="language">
               <option value="all">All</option>
               <option value="CSS">CSS</option>
               <option value="html">HTML</option>
