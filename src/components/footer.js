@@ -7,9 +7,8 @@ class Footer extends Component{
     return ( 
       <div>
         <footer id="mainFoot"> 
-        <ul>
-          <li>&copy; GitHub, inc.</li>
-          
+          <ul>
+            <li>&copy; GitHub, inc.</li>
             <li><a href="#">Terms</a></li>
             <li><a href="#">Privacy</a></li>
             <li><a href="#">Security</a></li>
